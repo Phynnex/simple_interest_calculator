@@ -1,0 +1,50 @@
+<DOCTYPE. Html>
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="style1.css">
+<script>
+ function simple_interest() {
+  let principal = document.querySelector("#principal").value;
+  let time = document.getElementById("time").value;
+  let rate = document.getElementById("rate").value;
+  var iresult = document.getElementById("iresult");
+  var result = parseInt(principal*time*rate/100);
+  
+   if(principal === ' ' || time === ' ' || rate === '') {
+        alert('please check your datas')
+   } else {
+  
+   iresult.innerHTML = result;
+   console.log(result)
+
+  }
+  
+ }
+
+simple_interest();
+</script>
+</head>
+
+<body>
+<header>
+</header>
+<section class="calculator-form">
+  <h1>Simple Interest Calculator</h1>
+<form>
+<label>Principal(in &#8358):</label>
+<input type="number" placeholder="Enter Investment Amount" id="principal"><br/>
+ <label>Rate(in %):</label>
+<input type="number" placeholder="Enter Interest Rate"id="rate"><br/>
+<label>Time (in years):</label>
+<input type="number" placeholder="Number of Years of Investment" id="time"><br/>
+ <button type="button"onclick="simple_interest()">Calculate</button>
+ <p id="iresult"></p>
+<p><h2>Group 3</h2>
+<h3>Fyne Tonye Angala</h3>
+<h3>Ibukunoluwa Kehinde</h3>
+</p>
+</form>
+</section>
+</body>
+</html>
